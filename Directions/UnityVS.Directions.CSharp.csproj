@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Arrow\ArrowScript.cs" />
     <Compile Include="Assets\Scripts\Arrow\CenterPointScript.cs" />
+    <Compile Include="Assets\Scripts\Camera\TouchHandler.cs" />
     <Compile Include="Assets\Scripts\Game\BoardManager.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
   </ItemGroup>
