@@ -3,38 +3,38 @@ using System.Collections;
 
 public class ArrowScript : MonoBehaviour {
 
-    [HideInInspector]public int currentRotation;
     [HideInInspector]public Transform neighbourArrow;
+    [HideInInspector]public Transform myCenterPoint;
 
-	void Start () {
-	
-	}
-	
-    void Update () {
-	
-	}
+    int rotationDirection = -1; // -1 for clockwise :: 1 for anti-clockwise
+    int rotationStep = 5;
+    bool doingRotation;
 
-    public void Rotate()
+    private Vector3 currentRotation, targetRotation;
+
+    public void rotateObject()
     {
-        Debug.Log("ArrowScript:Rotate()");
-        int zRot = 0;
-        switch (currentRotation)
-        { 
-            case 0:
-                zRot = 90;
-                break;
-            case 90:
-                zRot = 180;
-                break;
-            case 180:
-                zRot = 270;
-                break;
-            case 270:
-                zRot = 0;
-                break;
+        if (!doingRotation)
+        {
+            doingRotation = true;
+            currentRotation = transform.eulerAngles;
+            targetRotation.z = (currentRotation.z + (90 * rotationDirection));
+            StartCoroutine("objectRotation");
         }
-        currentRotation = zRot;
-        //transform.rotation.eulerAngles.z =  zRot;
     }
 
+    IEnumerator objectRotation()
+    {
+        while (((int)currentRotation.z > (int)targetRotation.z && rotationDirection < 0) || ((int)currentRotation.z < (int)targetRotation.z && rotationDirection > 0))
+        {
+            currentRotation.z += (rotationStep * rotationDirection);
+            transform.eulerAngles = currentRotation;
+
+            yield return new WaitForSeconds(0);
+        }
+
+        doingRotation = false;
+        yield return null;
+
+    }
 }

@@ -28,8 +28,7 @@ public class BoardManager : MonoBehaviour
 
     public GameObject arrowTiles;
     public GameObject[] pointsTiles;
-    public TouchHandler touchHandler;
-
+    
     private Transform boardHolder;
     private List<Vector3> gridPositions = new List<Vector3>();
 
@@ -63,8 +62,7 @@ public class BoardManager : MonoBehaviour
                 else
                 {
                     GameObject toInstantiate;
-                    Quaternion rot;
-
+                    
                     if (x == -1.5f || y == rows + 1 )
                     {
                         if (y == rows + 1 & x == -1.5f)
@@ -72,21 +70,17 @@ public class BoardManager : MonoBehaviour
                         else
                         {
                             toInstantiate = pointsTiles[Random.Range(0, pointsTiles.Length)];
-                            rot = Quaternion.identity;
                         }
                     }
                     else
                     {
                         toInstantiate = arrowTiles;
-                        rot = RandomRotation();
                     }
 
                     
                     GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), RandomRotation()) as GameObject;
                     instance.name = instance.tag + " [x:" + x + ";y:" + y + "]";
-                    if (instance.tag == "Arrow")
-                        instance.GetComponent<ArrowScript>().currentRotation = (int)rot.eulerAngles.z;
-
+                    
                     instance.transform.SetParent(boardHolder);
                 }
             }

@@ -3,13 +3,6 @@ using System.Collections;
 
 public class TouchHandler : MonoBehaviour {
 
-    int arrowLayer;
-
-    void Start()
-    {
-        arrowLayer = LayerMask.NameToLayer("ArrowLayer");
-    }
-
     void Update()
     {
 #if !UNITY_STANDALONE || !UNITY_EDITOR
@@ -35,7 +28,7 @@ public class TouchHandler : MonoBehaviour {
                 if (hit.collider.tag == "Arrow")
                 {
                     ArrowScript arrowScript = hit.collider.GetComponent<ArrowScript>();
-                    arrowScript.Rotate();
+                    arrowScript.rotateObject();
                 }
             }else
                 Debug.Log("NO HIT");
