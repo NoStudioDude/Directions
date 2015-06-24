@@ -1,0 +1,13 @@
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\UnityEditor.dll
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\UnityEngine.dll
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\UnityEngine.xml
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\UnityEditor.xml
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+D:\Projects\Unity3D\Directions\Directions\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+D:\Projects\Unity3D\Directions\Directions\obj\Debug\UnityVS.Directions.CSharp.csprojResolveAssemblyReference.cache
+D:\Projects\Unity3D\Directions\Directions\obj\Debug\Assembly-CSharp.dll
+D:\Projects\Unity3D\Directions\Directions\obj\Debug\Assembly-CSharp.pdb
